@@ -1,6 +1,11 @@
 {
   "version": 1,
   "updatedAt": "2026-07-06",
+  "recording": {
+    "ignoredPackages": [
+      "com.whatsapp"
+    ]
+  },
   "appsheet": {
     "baseUrl": "https://www.appsheet.com/start/6a854e6d-903d-44b3-9f3f-295edff03650#view=InputPOSForm&defaults=",
     "fields": {
