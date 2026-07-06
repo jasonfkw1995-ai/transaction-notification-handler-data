@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "updatedAt": "2026-07-06",
+  "appsheet": {
+    "baseUrl": "https://www.appsheet.com/start/6a854e6d-903d-44b3-9f3f-295edff03650#view=InputPOSForm&defaults=",
+    "fields": {
+      "date": "\u8f38\u5165\u65e5\u671f",
+      "merchant": "\u9805\u76ee",
+      "amountHkd": "\u91d1\u984d(HKD)",
+      "method": "\u4ea4\u6613\u65b9\u5f0f\u985e\u5225",
+      "remark": "\u5099\u8a3b"
+    }
+  },
+  "rules": [
+    {
+      "id": "google_wallet_hkd_card_payment",
+      "enabled": true,
+      "packageName": "com.google.android.apps.walletnfcrel",
+      "titleRejectRegex": "^(\u6b63\u5728\u6e96\u5099\u6536\u64da|Google \u9322\u5305|\u53e6 [0-9]+ \u5247\u901a\u77e5)$",
+      "textRegex": "^HK\\$([0-9,.]+) \\(\u4f7f\u7528 (.+) \u4ed8\u6b3e\\)$",
+      "merchantFrom": "title",
+      "amountGroupIndex": 1,
+      "methodGroupIndex": 2,
+      "currency": "HKD",
+      "dateFrom": "postTime",
+      "notifyUser": true,
+      "dismissSourceNotification": true
+    }
+  ]
+}
