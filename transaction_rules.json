@@ -45,7 +45,8 @@
       "currency": "HKD",
       "dateFrom": "text",
       "notifyUser": true,
-      "dismissSourceNotification": false
+      "dismissSourceNotification": false,
+      "sourceActionTitleRegex": "^\u6a19\u8a18\u70ba\u5df2\u8b80$"
     }
   ]
 }
