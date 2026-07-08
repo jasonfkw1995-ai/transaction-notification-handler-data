@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-06",
+  "updatedAt": "2026-07-08",
   "recording": {
     "ignoredPackages": [
       "com.whatsapp"
@@ -30,6 +30,22 @@
       "dateFrom": "postTime",
       "notifyUser": true,
       "dismissSourceNotification": true
+    },
+    {
+      "id": "scbhk_sms_hkd_credit_card_payment",
+      "enabled": true,
+      "packageName": "com.samsung.android.messaging",
+      "titleRegex": "^#SCBHK$",
+      "textRegex": "^\u6e23\u6253\u9999\u6e2f:\u60a8\u7684\u4fe1\u7528\u5361\u7d50\u5c3e([0-9]{4})\u65bc([0-9]{2}/[0-9]{2}) \u5728\\s*(.+?)\\s*\u6709\u9805HKD([0-9,.]+)\u4ea4\u6613\\s*\u3002[\\s\\S]*$",
+      "merchantGroupIndex": 3,
+      "amountGroupIndex": 4,
+      "methodGroupIndex": 1,
+      "methodTemplate": "* {cardLast4}",
+      "dateGroupIndex": 2,
+      "currency": "HKD",
+      "dateFrom": "text",
+      "notifyUser": true,
+      "dismissSourceNotification": false
     }
   ]
 }
