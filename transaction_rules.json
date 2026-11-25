@@ -1,6 +1,6 @@
 {
-  "version": 3,
-  "updatedAt": "2026-09-27",
+  "version": 4,
+  "updatedAt": "2026-11-25",
   "recording": {
     "ignoredPackages": [
       "com.whatsapp"
@@ -65,6 +65,23 @@
       "notifyUser": true,
       "dismissSourceNotification": false,
       "sourceActionTitleRegex": "^\\s*標記為已讀\\s*$"
+    },
+    {
+      "id": "hsbc_sms_foreign_currency_credit_card_payment",
+      "enabled": true,
+      "packageName": "com.samsung.android.messaging",
+      "textRegex": "^\\s*[滙匯]豐\\s*[:：]\\s*我們收到您信用卡結尾號碼\\s*([0-9]{4})\\s*的一項卡付款交易\\s*[:：]\\s*([A-Z]{3})\\s*([0-9,.]+)\\s*於\\s*([0-9]{4})年\\s*([0-9]{1,2})月\\s*([0-9]{1,2})號\\s*[0-9]{1,2}:[0-9]{2}:[0-9]{2}\\s*HKT\\s+(.+?)\\s*[。.]?\\s*如懷疑電[\\s\\S]*$",
+      "merchantGroupIndex": 7,
+      "currencyGroupIndex": 2,
+      "currencyRejectRegex": "^HKD$",
+      "amountGroupIndex": 3,
+      "amountHkdValue": "0",
+      "methodGroupIndex": 1,
+      "methodTemplate": "* {cardLast4}",
+      "remarkTemplate": "{currency} {amount}",
+      "dateFrom": "postTime",
+      "notifyUser": true,
+      "dismissSourceNotification": false
     }
   ]
 }
